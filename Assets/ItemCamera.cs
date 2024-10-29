@@ -11,15 +11,15 @@ public class ItemCamera : MonoBehaviour
     {
         if (Input.GetButtonDown("TakePhoto"))
         {
-            print("aw");
-            //StartCoroutine("TakeScreenshot");
+            //print("aw");
+            StartCoroutine("TakeScreenshot");
         }
 
     }
 
     private IEnumerator TakeScreenshot()
     {
-        print("snap");
+        //print("snap");
 
         Camera cam = Camera.main;
         Texture2D image = new Texture2D(1000, 1000);
