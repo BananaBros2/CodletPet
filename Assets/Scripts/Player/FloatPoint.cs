@@ -26,11 +26,7 @@ public class FloatPoint : MonoBehaviour
         rb.AddForceAtPosition(Physics.gravity * 1.6f / floaterCount, transform.position, ForceMode.Acceleration);
 
         float heightAboveGround = 11;
-        //Physics.Raycast(transform.position + Vector3.up * 5, Vector3.down, out RaycastHit hit, 25, waterLayer);
-        //if (hit.collider != null)
-        //{
-        //    heightAboveGround = hit.distance - 5.066f;
-        //}
+
         heightAboveGround = waves.GetHeight(transform.position);
 
 
@@ -43,6 +39,5 @@ public class FloatPoint : MonoBehaviour
         }
 
     }
-
 
 }

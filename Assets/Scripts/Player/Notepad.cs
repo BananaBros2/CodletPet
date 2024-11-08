@@ -20,6 +20,10 @@ public class Notepad : MonoBehaviour
     private bool interacting;
     private bool textUp;
 
+    public bool copyToNotepad = true;
+    public GameObject notepad;
+
+
     private void Start()
     {
         noteViewer = NoteUI.transform.GetChild(0).GetComponent<Image>();
@@ -34,6 +38,12 @@ public class Notepad : MonoBehaviour
         noteTextComponent.text = noteText;
 
         interacting = true;
+
+        if (copyToNotepad)
+        {
+            notepad.GetComponent<Notepad>().noteImage = noteImage;
+            notepad.GetComponent<Notepad>().noteText = noteText;
+        }
     }
 
     private void Update()

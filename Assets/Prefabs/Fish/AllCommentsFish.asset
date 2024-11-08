@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4738bdad748c102458d244468121fc12, type: 3}
+  m_Name: AllCommentsFish
+  m_EditorClassIdentifier: 
+  fishName: Fishy
+  codeFish: 0
+  kText:
+  - Exactly what you would expect.
+  - Fail.
+  - For the love of god, do not touch.
+  - Funny isn't it?
+  - Good.
+  - It's really, really, really goddamn small.
+  - It's that simple.
+  - It's white?
+  - Less sticky, more slippery.
+  - Let's give it a value of 200p.
+  - Nooo
+  - Really bad.
+  - That is really, really, really bad
+  - That's all I really want.
+  - This is great.
+  - This is really helpful.
+  - We are in deep sh-
+  - We don't really want this.
+  - We don't want that.
+  - Well it's green?
+  - Works for me, great.
+  kAudioClip:
+  - {fileID: 8300000, guid: 94858ecef8aeab54d87070b1d67fd112, type: 3}
+  - {fileID: 8300000, guid: 64a788bdf70045c4b82b36063f5e537d, type: 3}
+  - {fileID: 8300000, guid: 59250aed0e47e044aa2778a988e7d519, type: 3}
+  - {fileID: 8300000, guid: ec69f8bf0c6463c4ab7156c51e0d1e40, type: 3}
+  - {fileID: 8300000, guid: 49cc15d4202bad947be7b8e882a5eb58, type: 3}
+  - {fileID: 8300000, guid: fb74c1bc6ae83b141b529a21983ab1f0, type: 3}
+  - {fileID: 8300000, guid: 04d3095922d516c4ebc67e65bce86113, type: 3}
+  - {fileID: 8300000, guid: 95e6145742d6c3d43966c6d760412c2e, type: 3}
+  - {fileID: 8300000, guid: f066457a8893ebf43bf2f168fe7702c8, type: 3}
+  - {fileID: 8300000, guid: 7011aca615f38d940a0bb3649cd6b69a, type: 3}
+  - {fileID: 8300000, guid: 72e887e0c4f7d8e4db48d5788f0a8182, type: 3}
+  - {fileID: 8300000, guid: b73ae859842e0c84a929fd44fb962d7a, type: 3}
+  - {fileID: 8300000, guid: 2765d6a4ba4242c47a9ccfa7c0b43778, type: 3}
+  - {fileID: 8300000, guid: dd4c0611a321198458983d51faf90303, type: 3}
+  - {fileID: 8300000, guid: 75f8b2b1a96412e4d90a93ac9eba39f7, type: 3}
+  - {fileID: 8300000, guid: 2d8a7f61f676af84d83fb532fdece255, type: 3}
+  - {fileID: 8300000, guid: 6d769eaf4ba2fc749b1d4d88a8a39c7f, type: 3}
+  - {fileID: 8300000, guid: 62c4179d1c41ea94eb19440b24732676, type: 3}
+  - {fileID: 8300000, guid: 7e56a338d589a1942b1f00d729757e75, type: 3}
+  - {fileID: 8300000, guid: 2fcc901e760e69c42abe36054a0b6c99, type: 3}
+  - {fileID: 8300000, guid: 9317a2499063d764da140b1783613ea6, type: 3}
+  fishIcon: {fileID: 0}

@@ -9,6 +9,7 @@ public class FishingRod : MonoBehaviour
     public GameObject cameraHolder;
     public BoatMovement movementScript;
 
+    public float castPower = 10;
     private bool cast;
     private bool canCastAgain = true;
 
@@ -28,7 +29,7 @@ public class FishingRod : MonoBehaviour
             {
                 bobber.transform.parent = null;
                 bobber.GetComponent<SpringJoint>().maxDistance = 5;
-                bobber.GetComponent<Rigidbody>().AddForce(cameraHolder.transform.TransformDirection(Vector3.forward) * 15, ForceMode.Impulse);
+                bobber.GetComponent<Rigidbody>().AddForce(cameraHolder.transform.TransformDirection(Vector3.forward) * castPower, ForceMode.Impulse);
             }
             else
             {

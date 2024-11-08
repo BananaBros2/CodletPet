@@ -28,7 +28,7 @@ public class KeypadButton : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (!keypadController.isActive) { return; }
+        if (!keypadController.isActive || keypadController.resetting) { return; }
 
         switch (buttonType)
         {
@@ -50,6 +50,8 @@ public class KeypadButton : MonoBehaviour
 
     private void OnMouseEnter()
     {
+        if (!keypadController.isActive) { return; }
+
         outline.enabled = true;
     }
 

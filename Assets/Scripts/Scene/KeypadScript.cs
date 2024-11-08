@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.Events;
+using static UnityEngine.Rendering.DebugUI;
 
 public class KeypadScript : MonoBehaviour
 {
@@ -20,7 +21,13 @@ public class KeypadScript : MonoBehaviour
 
     public bool isActive;
 
-    public UnityEvent activate;
+
+    [HideInInspector] public UnityEvent activate;
+    [HideInInspector] public bool resetting;
+
+    public Light redLED;
+    public Light greenLED;
+
 
     private void Start()
     {
@@ -57,8 +64,50 @@ public class KeypadScript : MonoBehaviour
     {
         if (currentNumber == correctCode)
         {
-            activate.Invoke();
+            playerCamera.ReturnCameraView(cameraView);
+            playerInteractor.ResetInteraction();
+
+            itemScript.DisableOutline(true);
+            Destroy(itemScript);
+            isActive = false;
+
+            StartCoroutine(CorrectSequence());
         }
+        else
+        {
+            resetting = true;
+            StartCoroutine(IncorrectSequence());
+        }
+    }
+
+    public IEnumerator IncorrectSequence()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            redLED.intensity = 0.5f;
+            yield return new WaitForSeconds(0.2f);
+            redLED.intensity = 0.002f;
+            yield return new WaitForSeconds(0.2f);
+        }
+
+        currentNumber = "";
+        text.text = currentNumber;
+
+        resetting = false;
+    }
+
+    public IEnumerator CorrectSequence()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            greenLED.intensity = 0.002f;
+            yield return new WaitForSeconds(0.2f);
+            greenLED.intensity = 0.5f;
+            yield return new WaitForSeconds(0.2f);
+
+        }
+
+        activate.Invoke();
 
     }
 
